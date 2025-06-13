@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(45, 70%, 20%);
+    --text-color: hsl(30, 0, 10%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 20%, 80%);
+    color: hsl(30, 0, 10%);
+}
+
+/* common styles */
+
+img {
+    width: 100%;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.item-pretitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.item-title {
+    font-size: 1.6rem;
+    color: hsl(0, 0%, 40%);
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+
+.item-subtitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/* layout */
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background: hsl(0, 20%, 75%);
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+}
+
+.group-1,
+.group-2,
+{
+display: flex;
+flex-direction: column;
+gap: 5rem;
+}
+
+.group-3 {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.group-3>div {
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile {
+        margin-bottom: 0;
+    }
+
+    .group-3 {
+        flex-direction: column;
+    }
+
+}
+
+/* profile */
+.profile-container {
+    display: flex;
+    gap: 5rem;
+}
+
+.profile-profilimg {
+    max-width: 250px;
+}
+
+.profile-name-firstname {
+    color: var(--text-color);
+    font-weight: 200;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.8rem;
+}
+
+.profile-name-lastname {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.profile-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.skill-list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.ref-item {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* education */
+
+.edu-item {
+    margin-top: 2rem;
+}
+
+/* socials */
+.social-list {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    line-height: 2;
+}
+
+hr {
+    grid-column: 1/-1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid hsl(0, 0%, 40%);
+}
+
+@media only screen and (max-width:768px) {
+    hr {
+        margin: 0 auto;
+    }
+
+}
